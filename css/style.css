@@ -104,7 +104,11 @@ body {
 }
 
 .card {
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-secondary); /* Fallback if image doesn't load */
+    background-image: url('http://34.28.45.117:8000/assets/16f641fe83334753bc08e5cae512a82b.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     border: 1px solid var(--border-color);
     border-radius: 16px;
     padding: 1.5rem;
@@ -138,6 +142,10 @@ body {
 .card-content {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
+    /* Added a semi-transparent overlay to improve text readability over background image */
+    background-color: rgba(16, 17, 19, 0.7); /* var(--bg-primary) with alpha */
+    padding: 1rem;
+    border-radius: 8px;
 }
 
 .card.loaded .card-content {
