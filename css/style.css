@@ -50,6 +50,17 @@ body {
     animation: fadeInDown 0.8s ease-out;
 }
 
+.header-logo-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem; /* Space between logo and title */
+}
+
+.header-logo {
+    height: 40px; /* Adjust as needed */
+    width: auto;
+}
+
 .header-title {
     font-family: 'Poppins', sans-serif;
     font-size: 2.5rem;
@@ -256,10 +267,13 @@ body {
     .container { padding: 1rem; }
     .header-title { font-size: 2rem; }
     .user-profile .username { display: none; }
+    .header-logo { height: 35px; }
 }
 
 @media (max-width: 480px) { /* Added more specific mobile styles based on typical needs */
     .header-title { font-size: 1.8rem; }
+    .header-logo { height: 30px; }
+    .header-logo-title { gap: 0.5rem; }
     .card { padding: 1rem; }
     .metric-value { font-size: 2.2rem; }
     .metric-value .unit { font-size: 1.1rem; }
