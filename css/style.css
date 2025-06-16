@@ -29,7 +29,12 @@ html {
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: var(--bg-primary);
+    background-color: var(--bg-primary); /* Fallback color */
+    background-image: url('/assets/dashboard-background.png'); /* Added background image */
+    background-size: cover; /* Cover the entire page */
+    background-position: center center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-attachment: fixed; /* Fixed background during scroll, optional */
     color: var(--text-primary);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
