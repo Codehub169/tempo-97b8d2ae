@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuantumLeap | AI-Powered Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+            <h1 class="header-title">Quantum<span class="highlight">Leap</span></h1>
+            <div class="user-profile">
+                <span class="username">Alex Mercer</span>
+                <img src="https://i.pravatar.cc/100?u=alexmercer" alt="User Avatar" class="avatar">
+            </div>
+        </header>
+
+        <main class="dashboard-grid">
+            <!-- Card 1: Revenue -->
+            <div class="card" id="revenue-card" style="animation-delay: 0.1s;">
+                <div class="skeleton-wrapper">
+                    <div class="skeleton skeleton-header"></div>
+                    <div class="skeleton skeleton-title"></div>
+                    <div class="skeleton skeleton-text"></div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V15M3 15h12m0 0V6" /></svg>
+                        <span>Total Revenue</span>
+                    </div>
+                    <div class="metric-value" id="revenue-value"></div>
+                    <div class="metric-delta positive" id="revenue-delta"></div>
+                </div>
+            </div>
+
+            <!-- Card 2: User Growth -->
+            <div class="card" id="users-card" style="animation-delay: 0.2s;">
+                <div class="skeleton-wrapper">
+                    <div class="skeleton skeleton-header"></div>
+                    <div class="skeleton skeleton-title"></div>
+                    <div class="skeleton skeleton-text"></div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m-7.5-2.962a3.75 3.75 0 1 0-5.236 0c-1.853 1.952-1.853 5.119 0 7.072a3.75 3.75 0 1 0 5.236 0M6.004 6.375a3.75 3.75 0 1 1-5.236 0 3.75 3.75 0 0 1 5.236 0Zm7.5 0a3.75 3.75 0 1 1-5.236 0 3.75 3.75 0 0 1 5.236 0Zm7.496 1.125a3.75 3.75 0 1 0-5.236 0c1.853 1.952 1.853 5.119 0 7.072a3.75 3.75 0 1 0 5.236 0" /></svg>
+                        <span>New Users</span>
+                    </div>
+                    <div class="metric-value" id="users-value"></div>
+                    <div class="metric-delta negative" id="users-delta"></div>
+                </div>
+            </div>
+
+            <!-- Card 3: Performance Chart -->
+            <div class="card" id="performance-card" style="animation-delay: 0.3s;">
+                 <div class="skeleton-wrapper">
+                    <div class="skeleton skeleton-header"></div>
+                    <div class="skeleton skeleton-chart"></div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h12M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-12a2.25 2.25 0 0 1-2.25-2.25V3m18 0-6 6m0 0-6-6m6 6v12" /></svg>
+                        <span>Server Performance</span>
+                    </div>
+                    <div class="chart-container" id="performance-chart-container"></div>
+                </div>
+            </div>
+
+            <!-- Card 4: Engagement Rate -->
+            <div class="card" id="engagement-card" style="animation-delay: 0.4s;">
+                <div class="skeleton-wrapper">
+                    <div class="skeleton skeleton-header"></div>
+                    <div class="skeleton skeleton-title"></div>
+                    <div class="skeleton skeleton-text"></div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 14.25v2.25m3-4.5v4.5m3-6.75v6.75m3-9v9M6 20.25h12A2.25 2.25 0 0 0 20.25 18V5.25A2.25 2.25 0 0 0 18 3H6A2.25 2.25 0 0 0 3.75 5.25v12.75A2.25 2.25 0 0 0 6 20.25Z" /></svg>
+                        <span>Engagement Rate</span>
+                    </div>
+                    <div class="metric-value" id="engagement-value"></div>
+                    <div class="metric-delta positive" id="engagement-delta"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/script.js" defer></script>
+</body>
+</html>
