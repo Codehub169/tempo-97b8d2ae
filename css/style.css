@@ -30,7 +30,7 @@ html {
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--bg-primary); /* Fallback color */
-    background-image: url('http://34.28.45.117:8000/assets/6cb147c0682044feafe4dbcf8e011cae.png'); /* Updated background image */
+    background-image: url('http://34.28.45.117:8000/assets/16f641fe83334753bc08e5cae512a82b.png'); /* New background image */
     background-size: cover; /* Cover the entire page */
     background-position: center center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
